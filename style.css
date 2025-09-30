@@ -23,6 +23,11 @@ body.fade-out{
   opacity: 0;
 }
 
+h1, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
 ul {
   list-style-type: none; /*removes the bullet points*/
 }
@@ -112,7 +117,7 @@ hr {
   display: flex;
   flex-direction: row; /* stack items vertically */
   align-items: center;
-  gap: 2rem;
+
   justify-content: flex-start;
   position: relative; /* no need for absolute top/left */
   transform: none;
