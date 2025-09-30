@@ -1,5 +1,6 @@
 *{ /*main font*/
   font-family: Gill Sans, sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -60,106 +61,144 @@ hr {
 }
 
 .title-settings{
-  position: relative;
-  bottom: 330px;
-  margin: 0 auto;
-  font-size: 100px;
+  margin-bottom: clamp(2rem, 5vw, 5rem);
+  font-size: clamp(2.8rem, 300vw, 7rem);
   z-index: 5;
-   
 
   background-image: linear-gradient(to top, #7b08ff 40%, #f4f4f4 100%);
   background-size: 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: flex;
   align-items: center;
   color: white;
   -webkit-text-stroke: 1px black;
 }
 
 .subscribe-button {
-  width: auto;
-  height: 100px;
-  margin: 0 auto;
-  display: flex;
+  width: clamp(14rem, 60vw, 20rem); /* scales with screen */
+  height: auto;
   padding: 1px;
-  border: 0px;
-  box-sizing: border-box; /*make life much easier*/
-  position: relative;
-  bottom: 620px;
-  right: 680px;
+  border: 0;
+  box-sizing: border-box;
+  margin-right: clamp(6rem, 15vw, 15rem);
 }
 
 .side-title{
   background-image: url(images/bricks.png);
   background-size: cover;
-  position: relative;
-  bottom: 460px;
-  left: 750px;
-  font-size: 40px;
-  position: relative;
+  background-position: center;
+  font-size: clamp(1.7rem, 7.5vw, 2.5rem);
   text-shadow:
     -2px -2px 0 black,
      2px -2px 0 black,
     -2px  2px 0 black,
      2px  2px 0 black;
+  margin-left: clamp(14rem, 35vw, 35rem);
 }
 
-.to-front{ /*honestly got most of this from AI (so sorry future me)*/
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.to-front{ 
+  /* position: absolute; 
+  top: 6.5%;
+  left: 50%; 
   transform: translate(-50%, -50%);
   z-index: 2;
+
+  display: flex;                
+  flex-direction: row;          
+  justify-content: center;      
+  align-items: center;     
+  gap: 2rem;     */
+
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* stack items vertically */
   align-items: center;
-  text-align: center;
-
-
+  gap: 2rem;
+  justify-content: flex-start;
+  position: relative; /* no need for absolute top/left */
+  transform: none;
+  top: 0;
 }
 
-.profile-pic { /*profile pic (duh)*/
-  width: 120px; /*size mainly since height is auto*/
-  height: 120px;
-  border-radius: 100px; /*rounds the corners*/
-  border: 2px solid black; /*black rim on the outside (don't forget to put solid)*/
-  /*margin: 0 auto; centers picture */
+.to-front h1,
+.to-front ul,
+.to-front li,
+.to-front img, 
+.to-front a {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+} 
+
+.header{
+  display: flex;
+  /*align-items: center;   /* vertical alignment */
+  justify-content: space-between; /* or space-between */
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.profile-pic { 
+  width: clamp(4rem, 12vw, 10rem);
+  height: auto;
+  border-radius: 50%;
+  margin: 0 auto;
   object-fit: cover;
-  position: relative;
-  right: 860px;
-  bottom: 150px;
+  margin-right: auto;
+}
+
+.tab-background{
+
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("images/blackBackground.jpg");
+  background-size: cover;
+  background-position: top center;
+  clip-path: inset(0 0 80% 0);
+  position: relative;  /* stays in flow, but doesn’t interfere */
+  z-index: -1;
+  pointer-events: none;
+  position: absolute;
+  
+}
+
+@media (max-width: 720px){
+  .tab-background {
+    clip-path: inset(0 0 70% 0);
+  }
+  .section-buttons {
+    gap: 0.5rem;
+    padding: 5px;
+  }
 }
 
 .slider { /*modify slider background*/
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90vh;
+  min-height: 90vh;
   background-size: cover;
   background-position: center 30%;
   z-index: -1; /* keeps it behind everything else */
   transition: background-image 1s ease-in-out;
-  position: relative;
   border: 5px solid black;
+  box-sizing: border-box;
+  position: relative;   /* keep things positioned inside */
+  width: 100%;
+  height: 100vh;        /* or however tall you want it */
+  overflow: hidden;
 }
 
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+.slider img{
+  position: absolute;   /* pull it out of normal flow */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* makes it act like a true background */
+
 }
 
 .link-size{
   width: auto;
-  height: 40px;
+  height: clamp(2.5rem, 3.5vw, 5.5rem);
   object-fit: cover;
-}
-
-.image-container{
-  display: flex;
-  overflow-x: auto;
-  gap: 10px;
 }
 
 .center-image {
@@ -170,33 +209,27 @@ hr {
   color:black;
 }
 
-.new-video{
-  color: firebrick;
-  font-size: 30px; 
-  margin: 0 auto;
-}
-
 .section-buttons{ /*how the buttons are lined and positioned at the top of the page*/
-  margin: 10px 10px;
+  max-width: 1200px;
+  margin-top: -2rem;
   padding: 10px;
   display: flex;
   border-radius: 10px;
-  gap: 1rem;
+  gap: clamp(0.5rem, 2vw, 1rem);
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .tab{ /*designing the tab section buttons itself*/
   border: 3px solid #f8f8f8;
   background-color: rgb(239, 232, 232, 0);
-  font-size: 30px;
-  padding: 10px 40px;
+  font-size: clamp(1rem, 4vw, 2rem);
+  padding: clamp(0.5rem, 1.5vw, 1rem) clamp(1rem, 4vw, 2.5rem);
   border-radius: 20px;
   cursor: pointer;
-  position: relative;
   z-index: 10;
-  top: 80px;
-  margin-bottom: 70px;
-  display: inline-block;
+  margin-bottom: clamp(1rem, 5vw, 4rem);
+  display: block;
 }
 
 /* .tab:hover {
@@ -204,16 +237,21 @@ hr {
     cursor: pointer;
 } */
 
-.aboutIMG{
-  position: relative;
-  height: 200px;
-  width: auto;
+.aboutIMG{ 
+  width: 100%;
+  max-width: 300px;
+  height: auto;
 }
 
 .hero-container {
   position: relative;
-  height: 600px;   /* or whatever height */
-  z-index: 10;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  /* padding-top: 5vh;  */
 }
 
 .hero-link {
@@ -224,8 +262,9 @@ hr {
 }
 
 .hero-link img {
-  height: 400px;
-  max-width: 100%;
+  height: auto;
+  width: clamp(100px, 40vw, 300px);
+  display: block;
 }
 
 .coming-soon{
@@ -234,12 +273,14 @@ hr {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-size: 90px;
+  font-size: clamp(2rem, 10vw, 6rem);
+  color: transparent;
 }
 
 .program{
-  margin-top: 200px; 
-  margin-left: 50px;
+  margin: 5vh auto 0 auto;
+  text-align: center;
+  font-size: clamp(2rem, 8vw, 5rem);
   background-image: linear-gradient(to top, #f7ef79 40%, #f4f4f4 100%);
   background-size: 100%;
   -webkit-background-clip: text;
@@ -247,15 +288,18 @@ hr {
   color: white;
   -webkit-text-stroke: 1px black;
   z-index: -1;
+  max-width: 100%;
 }
 
 .description{
-  position: absolute;
-  left: 1100px;
-  bottom: 400px;
+  position: relative;
   background-color: #494949;
   color: #cbc2c2;
-  padding: 50px 50px;
+  padding: clamp(1rem, 2vw, 3rem);
+  max-width: 90%;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .section-highlights{
@@ -264,16 +308,3 @@ hr {
   
 }
 
-.tab-background{
-  position: absolute;
-  left: 0px;
-  width: 100%;
-  height: 104vh;
-  z-index: -1;
-  object-position: top center;
-  clip-path: inset(-10px 0px 810px 0px);
-  display: block;
-  overflow: hidden;
-  /* background-position: top;
-  background-size: 110% auto; */
-}
