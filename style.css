@@ -158,22 +158,36 @@ hr {
 
 @media (max-width: 720px){ /*as seen on iphone*/
 
-  .to-front{
-    flex-direction: row;   /* keep row */
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;             /* tighten spacing so it fits */
-    flex-wrap: wrap;      
+  .to-front {
+    flex-direction: column;       /* stack items vertically */
+    align-items: center;          /* center horizontally */
+    justify-content: flex-start;  /* top-align */
+    gap: 1rem;                    /* spacing between elements */
+    margin-top: 1rem;             /* optional padding from top */
   }
-  .side-title{
-    margin-left: 0;        /* remove huge left push */
+
+  .profile-pic {
+    width: clamp(5rem, 20vw, 8rem);  /* smaller and responsive */
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .subscribe-button {
+    width: clamp(10rem, 40vw, 14rem); /* scale down for small screens */
+    margin: 1rem auto;                /* center horizontally */
+  }
+
+  .title-settings {
+    font-size: clamp(2rem, 8vw, 4rem); /* smaller font for mobile */
     text-align: center;
+    margin: 0.5rem 0;
   }
-  .profile-pic{
-    margin-right: 0;
-  }
-  .subscribe-button{
-    margin-right: 0;
+
+  .side-title {
+    margin-left: 0;                    /* reset large left margin */
+    margin-top: 0.5rem;
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    text-align: center;
   }
 
   .tab-background {
