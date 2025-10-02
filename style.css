@@ -44,7 +44,8 @@ hr {
 }
 
 .about{
-  background-color: rgba(65, 64, 64, 0.926);
+  /* background-color: rgba(65, 64, 64, 0.926); */
+  background-color: #7b08ff;
   padding: 50px 50px;
   margin: 0 300px;
 }
