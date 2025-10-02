@@ -167,24 +167,19 @@ hr {
   }
 
   .profile-pic {
-    margin-right: 0;
+    margin: 0 auto;
   }
 
-  /* .subscribe-button {
-    width: clamp(10rem, 40vw, 14rem); 
-    margin: 1rem auto;                
-    margin-right: clamp(3rem, 7.5vw, 7.5rem);
+  .subscribe-button {
+    margin: 0 auto;                
   }
 
   .title-settings {
-    font-size: clamp(2rem, 8vw, 4rem); 
-    text-align: center;
-    margin: 0.5rem 0;
-    margin-bottom: clamp(1rem, 2.5vw, 2.5rem);
-  } */
+    margin: 0 auto;
+  }
 
   .side-title {
-    margin-left: 0;                    /* reset large left margin */
+    margin: 0 auto;                 /* reset large left margin */
     text-align: center;
   }
 
