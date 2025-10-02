@@ -44,8 +44,7 @@ hr {
 }
 
 .about{
-  /* background-color: rgba(65, 64, 64, 0.926); */
-  background-color: #7b08ff;
+  background-color: rgba(65, 64, 64, 0.926);
   padding: 50px 50px;
   margin: 0 300px;
 }
@@ -107,11 +106,13 @@ hr {
   display: flex;
   flex-direction: row; /* stack items vertically */
   align-items: center;
-
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
   position: relative; /* no need for absolute top/left */
-  transform: none;
   top: 0;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 .to-front h1,
@@ -162,34 +163,29 @@ hr {
     flex-direction: column;       /* stack items vertically */
     align-items: center;          /* center horizontally */
     justify-content: flex-start;  /* top-align */
-    margin-top: 1rem;             /* optional padding from top */
+    gap: 0.5rem           /* optional padding from top */
   }
 
   .profile-pic {
-    width: clamp(5rem, 20vw, 8rem);  /* smaller and responsive */
-    height: auto;
-    margin: 0 auto;
+    margin-right: 0;
   }
 
-  .subscribe-button {
-    width: clamp(10rem, 40vw, 14rem); /* scale down for small screens */
-    margin: 1rem auto;                /* center horizontally */
+  /* .subscribe-button {
+    width: clamp(10rem, 40vw, 14rem); 
+    margin: 1rem auto;                
     margin-right: clamp(3rem, 7.5vw, 7.5rem);
   }
 
   .title-settings {
-    font-size: clamp(2rem, 8vw, 4rem); /* smaller font for mobile */
+    font-size: clamp(2rem, 8vw, 4rem); 
     text-align: center;
     margin: 0.5rem 0;
     margin-bottom: clamp(1rem, 2.5vw, 2.5rem);
-  }
+  } */
 
   .side-title {
     margin-left: 0;                    /* reset large left margin */
-    margin-top: 0.5rem;
-    font-size: clamp(1.2rem, 5vw, 2rem);
     text-align: center;
-    margin-left: clamp(7rem, 17.5vw, 17.5rem);
   }
 
   .tab-background {
