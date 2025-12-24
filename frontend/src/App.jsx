@@ -10,19 +10,19 @@ function App() {
   const [activeTab, setActiveTab] = useState("home");
 
   const renderTab = () => {
-    switch (activeTab) {
-      case "programs":
-        return <Programs />;
-      case "about":
-        return <About />;
-      case "chat":
-        return <Chat />;
-      case "momentum":
-        return <Momentum />;
-      default:
-        return <Home />;
-    }
-  };
+  switch (activeTab) {
+    case "programs":
+      return <div style={{ padding: "24px" }}><Programs /></div>;
+    case "about":
+      return <div style={{ padding: "24px" }}><About /></div>;
+    case "chat":
+      return <div style={{ padding: "24px" }}><Chat /></div>;
+    case "momentum":
+      return <div style={{ padding: "24px" }}><Momentum /></div>;
+    default:
+      return <Home />;
+  }
+};
 
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#f3f5f6ff" }}>
@@ -47,7 +47,7 @@ function App() {
           cursor: "pointer",
           }}
       >
-      {/* <img
+      <img
         src="/images/youtube-logo.png"
         alt="YouTube logo"
         style={{
@@ -56,7 +56,7 @@ function App() {
           borderRadius: "50%",     
           objectFit: "cover",
         }}
-      /> */}
+      />
 
       <span
         style={{
@@ -87,10 +87,30 @@ function App() {
         </div>
       </nav>
 
+        
       {/* CONTENT */}
-      <main style={{ padding: "24px" }}>
+      <main>
         {renderTab()}
       </main>
+
+      {/* FOOTER */}
+      <footer
+        style={{
+          backgroundColor: "#e8e9e9ff",
+          borderTop: "1px solid #646464ff",
+          padding: "48px 0",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1100px",
+            margin: "0 auto",
+            padding: "0 24px",
+          }}
+        >
+          {/* Intentionally left blank */}
+        </div>
+      </footer>
     </div>
   );
 }
