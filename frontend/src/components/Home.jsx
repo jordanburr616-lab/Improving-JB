@@ -10,6 +10,10 @@ function Home() {
   const youtubeVideos = [
 
   {
+    id: "7HQlAXvbhG8",
+    title: "building discipline is easier than it seems"
+  },
+  {
     id: "-nJkg6gsJRM",
     title: "confidence is easier than it seems",
   },
@@ -224,7 +228,7 @@ const heroStyles = {
             color: "#111",
           }}
         >
-          Structured System Calendar
+          30 Day Reset
         </h2>
 
         <p
@@ -304,7 +308,7 @@ const heroStyles = {
                   `,
                 }}
               >
-                PROGRAMS
+                SYSTEMS
               </h2>
 
               {/* BLUE UNDERLINE */}
@@ -349,7 +353,7 @@ const heroStyles = {
               </div>
 
               <h3 style={{ fontWeight: "700" }}>
-                Structured System Calendar
+                30 Day Reset
               </h3>
             </div>
 
