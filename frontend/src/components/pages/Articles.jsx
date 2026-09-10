@@ -20,6 +20,15 @@ function Articles() {
   const articles = [
 
     {
+      title: "The 7 Levels of YouTube Addiction",
+      slug: "the-7-levels-of-youtube-addiction",
+      category: "Addiction",
+      description:
+        "A breakdown of how YouTube can shift from a useful tool into a constant source of stimulation, procrastination, and dependency—and how to rebuild your relationship with it.",
+      image: "/images/video21.png",
+      live: true,
+    },
+    {
       title: "How to Reverse Alcoholism",
       slug: "how-to-reverse-alcoholism",
       category: "Addiction",

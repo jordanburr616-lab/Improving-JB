@@ -79,6 +79,10 @@ function Home() {
   const youtubeVideos = [
 
   {
+    id: "4s3YOThlIDI",
+    title: "the 7 levels to youtube addiction",
+  },
+  {
     id: "f6v-ppTYNhk",
     title: "the 7 levels to alcoholism",
   },
@@ -98,10 +102,7 @@ function Home() {
     id: "wjeYESP8Uew",
     title: "the 7 stages of weight loss",
   },
-  {
-    id: "ZHRfDUs0QuM",
-    title: "the 7 levels of a glow up",
-  },
+  
   
   
   
