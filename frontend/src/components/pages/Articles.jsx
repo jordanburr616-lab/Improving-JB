@@ -19,6 +19,24 @@ function Articles() {
 
   const articles = [
 
+    // {
+    //   title: "The 10 Levels of Attractiveness",
+    //   slug: "the-10-levels-of-attractiveness",
+    //   category: "Self-Improvement",
+    //   description:
+    //     "A breakdown of how attraction develops beyond appearance—from insecurity and obsession to discipline, confidence, purpose, and self-respect.",
+    //   image: "/images/video1k.png",
+    //   live: true,
+    // },
+    {
+      title: "The 7 Levels of an Introvert",
+      slug: "the-7-levels-of-an-introvert",
+      category: "Mindset",
+      description:
+        "How to embrace being an introvert without letting comfort turn into avoidance, overthinking, and isolation.",
+      image: "/images/video22.png",
+      live: true,
+    },
     {
       title: "The 7 Levels of YouTube Addiction",
       slug: "the-7-levels-of-youtube-addiction",
