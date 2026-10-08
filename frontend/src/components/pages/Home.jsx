@@ -79,6 +79,14 @@ function Home() {
   const youtubeVideos = [
 
   {
+    id: "A6uMRW966rQ",
+    title: "the 10 stages of attractiveness"
+  },
+  {
+    id: "IPPkg0d5nsU",
+    title: "the 7 stages of an introvert",
+  },
+  {
     id: "4s3YOThlIDI",
     title: "the 7 levels to youtube addiction",
   },
@@ -94,14 +102,7 @@ function Home() {
     id: "0VnhSGCGbvE",
     title: "how to make building muscle as addictive as videogames"
   },
-  {
-    id: "ILbDe687Fpk",
-    title: "why you care so much (and how to stop)"
-  },
-  {
-    id: "wjeYESP8Uew",
-    title: "the 7 stages of weight loss",
-  },
+  
   
   
   
